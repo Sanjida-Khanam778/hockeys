@@ -17,13 +17,14 @@
                         'primary_clr': '#FF4240',
                         'second_clr': '#131318',
                         'para_clr': '#424247',
+                        'accent': 'rgba(255, 255, 255, 0.6)',
                     },
                 },
             },
         }
     </script>
     <style>
-        .manrope{
+        .manrope {
             font-family: "Manrope", sans-serif;
         }
     </style>
@@ -37,11 +38,11 @@
 
 <body class="manrope">
     <header class="w-11/12 mx-auto">
-        <nav>
-            <div class="navbar bg-base-100">
+        <nav class="my-8">
+            <div class="navbar">
                 <div class="navbar-start">
                     <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <div tabindex="0" role="button" class="lg:hidden mr-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -50,30 +51,78 @@
                         </div>
                         <ul tabindex="0"
                             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a class="hover:text-primary_clr duration-300 ease-in-out">Home</a></li>
-                            <li><a class="hover:text-primary_clr duration-300 ease-in-out">About</a></li>
-                            <li><a class="hover:text-primary_clr duration-300 ease-in-out">Pages</a></li>
-                            <li><a class="hover:text-primary_clr duration-300 ease-in-out">Blog</a></li>
-                            <li><a class="hover:text-primary_clr duration-300 ease-in-out">Contact</a></li>
+                            <li><a class="font-bold hover:text-primary_clr duration-300 ease-in-out">Home</a></li>
+                            <li><a class="font-bold hover:text-primary_clr duration-300 ease-in-out">About</a></li>
+                            <li><a class="font-bold hover:text-primary_clr duration-300 ease-in-out">Pages</a></li>
+                            <li><a class="font-bold hover:text-primary_clr duration-300 ease-in-out">Blog</a></li>
+                            <li><a class="font-bold hover:text-primary_clr duration-300 ease-in-out">Contact</a></li>
                         </ul>
                     </div>
-                    <a class=" text-4xl font-extrabold">Hockey<span class="text-primary_clr">'</span>s</a>
+                    <a class="text-2xl md:text-4xl font-extrabold">Hockey<span class="text-primary_clr">'</span>s</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a class="text-para_clr hover:bg-transparent hover:text-primary_clr duration-300 ease-in-out">Home</a></li>
-                        <li><a class="text-para_clr hover:bg-transparent hover:text-primary_clr duration-300 ease-in-out">About</a></li>
-                        <li><a class="text-para_clr hover:bg-transparent hover:text-primary_clr duration-300 ease-in-out">Pages</a></li>
-                        <li><a class="text-para_clr hover:bg-transparent hover:text-primary_clr duration-300 ease-in-out">Blog</a></li>
-                        <li><a class="text-para_clr hover:bg-transparent hover:text-primary_clr duration-300 ease-in-out">Contact</a></li>
+                        <li><a
+                                class="font-bold text-para_clr hover:bg-transparent hover:text-primary_clr duration-300 ease-in-out">Home</a>
+                        </li>
+                        <li><a
+                                class="font-bold text-para_clr hover:bg-transparent hover:text-primary_clr duration-300 ease-in-out">About</a>
+                        </li>
+                        <li><a
+                                class="font-bold text-para_clr hover:bg-transparent hover:text-primary_clr duration-300 ease-in-out">Pages</a>
+                        </li>
+                        <li><a
+                                class="font-bold text-para_clr hover:bg-transparent hover:text-primary_clr duration-300 ease-in-out">Blog</a>
+                        </li>
+                        <li><a
+                                class="font-bold text-para_clr hover:bg-transparent hover:text-primary_clr duration-300 ease-in-out">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="navbar-end space-x-6">
-                    <i class="fa-solid fa-magnifying-glass text-[#89898B] text-2xl"></i>
+                    <i class="fa-solid fa-magnifying-glass text-[#89898B] text-2xl hidden md:block"></i>
                     <a class="btn text-xl font-bold bg-primary_clr text-white">Get Ticket</a>
                 </div>
             </div>
         </nav>
+        <div class="relative">
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full mx-auto">
+                    <img src="Images/1.png" class="md:w-full h-[200px] md:h-[550px]" />
+                    <div class="absolute flex space-x-4 bottom-5 md:bottom-8 md:left-8 left-1/2 -translate-x-1/2">
+                        <a href="#slide4" class="btn btn-circle bg-second_clr border-none text-white">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-second_clr border-none text-white">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="Images/2.png" class="w-full h-[200px] md:h-[550px]" />
+                    <div class="absolute flex space-x-4 md:bottom-8 md:left-8 bottom-5 left-1/2 -translate-x-1/2">
+                        <a href="#slide1" class="btn btn-circle bg-second_clr border-none text-white">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-second_clr border-none text-white">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="Images/3.png" class="w-full h-[200px] md:h-[550px]" />
+                    <div class="absolute flex space-x-4 md:bottom-8 md:left-8 bottom-5 left-1/2 -translate-x-1/2">
+                        <a href="#slide2" class="btn btn-circle bg-second_clr border-none text-white">❮</a>
+                        <a href="#slide4" class="btn btn-circle bg-second_clr border-none text-white">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="Images/4.png" class="w-full h-[200px] md:h-[550px]" />
+                    <div class="absolute flex space-x-4 md:bottom-8 md:left-8 bottom-5 left-1/2 -translate-x-1/2">
+                        <a href="#slide3" class="btn btn-circle bg-second_clr border-none text-white">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-second_clr border-none text-white">❯</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="md:absolute md:w-1/2 bg-second_clr text-white md:bottom-8 md:right-8 rounded-2xl p-4 md:p-8 space-y-4">
+                <h3 class="text-2xl font-extrabold">Meet all the heroes from the field</h3>
+                <p class="font-medium text-accent">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis
+                    placerat dolor. Purus urna in sit nullam proin. </p>
+            </div>
+        </div>
     </header>
     <main>
 
